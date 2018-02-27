@@ -1,7 +1,7 @@
 # Личный проект «Девайс»
 
 * Студент: [Елизавета Винокурова](https://up.htmlacademy.ru/htmlcss/20/user/123355).
-* Наставник: [Филипп Шамсиев](https://htmlacademy.ru/profile/toolx).
+* Наставник: [Филипп Шамсиев](https://up.htmlacademy.ru/htmlcss/20/user/70260).
 
 ---
 
