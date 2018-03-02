@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <title>HTML Academy: Девайс</title>
+</head>
+<body>
+
+<header class="page-header wrapper">
+  <nav class="main-nav">
+    <a class="main-nav__logo  site-logo  link" href="index.html">
+      <span class="site-logo__visual">device</span>
+      <span class="visually-hidden">Логотип Device</span>
+    </a>
+    <form class="main-nav__search  form-search" action="#" method="get">
+      <input class="form-search__field" type="search" placeholder="поиск по сайту">
+      <input class="form-search__button button-search" type="submit" value="Найти">
+    </form>
+    <ul class="main-nav__user-list  user-menu">
+      <li class="user-menu__item">
+        <!-- Не совсем поняла задачу, поэтому отображение для авторизованного и неавторизованного пользователя пока дублируют друг друга. Если они просто на разных страницах будут без реализации авторизации – то переделаю. -->
+        <a class="user-menu__link  user-menu__no-user  link" href="login.html">
+          <span class="user-menu__text  user-menu__text--user">Войти</span>
+        </a>
+        <a class="user-menu__link  user-menu__user-logged  link" href="profile.html">
+          <span class="user-menu__text  user-menu__text--user">Валентин Петухов</span>
+        </a>
+        <a class="user-menu__link  user-menu__user-logged  link" href="logout.html">
+          <span class="user-menu__text  user-menu__text--exit">Выйти</span>
+        </a>
+      </li>
+      <li class="user-menu__item">
+        <a class="user-menu__link  link" href="compare.html">
+          <span class="user-menu__text  user-menu__text--compare">Сравнить</span>
+        </a>
+      </li>
+      <li class="user-menu__item">
+        <a class="user-menu__link  link" href="cart.html">
+          <span class="user-menu__text  user-menu__text--cart">Корзина</span>
+        </a>
+      </li>
+    </ul>
+    <ul class="main-nav__site-list  main-menu">
+      <li class="main-menu__item  main-menu__item--catalog">
+        <ul class="main-menu__list  catalog-list">
+          <li class="catalog-list__item">
+            <ul class="catalog-list__section  catalog-menu">
+              <li class="catalog-menu__item"><a class="catalog-menu__link  link" href="catalog-virtual.html">Виртуальная реальность</a></li>
+              <li class="catalog-menu__item"><a class="catalog-menu__link  link" href="catalog-selfie.html">Моноподы для селфи</a></li>
+              <li class="catalog-menu__item"><a class="catalog-menu__link  link" href="catalog-action.html">Экшен-камеры</a></li>
+            </ul>
+          </li>
+          <li class="catalog-list__item">
+            <ul class="catalog-list__section  catalog-menu">
+              <li class="catalog-menu__item"><a class="catalog-menu__link  link" href="catalog-fitness.html">Фитнес-браслеты</a></li>
+              <li class="catalog-menu__item"><a class="catalog-menu__link  link" href="catalog-watch.html">Умные часы</a></li>
+            </ul>
+          </li>
+          <li class="catalog-list__item">
+            <ul class="catalog-list__section  catalog-menu">
+              <li class="catalog-menu__item"><a class="catalog-menu__link  link" href="catalog-copter.html">Квадрокоптеры</a></li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+      <li class="main-menu__item">
+        <a class="main-menu__link  link">Доставка</a>
+      </li>
+      <li class="main-menu__item">
+        <a class="main-menu__link  link">Гарантия</a>
+      </li>
+      <li class="main-menu__item">
+        <a class="main-menu__link  link">Контакты</a>
+      </li>
+    </ul>
+  </nav>
+</header>
+
+<main class="page-main">
+  <header class="page-main__header  wrapper">
+    <h1 class="page-main__title">Моноподы для селфи</h1>
+    <ul class="page-main__navigation  breadcrumps">
+      <li class="breadcrumps__item">
+        <a class="breadcrumps__link" href="index.html">Главная</a>
+      </li>
+      <li class="breadcrumps__item">
+        <a class="breadcrumps__link" href="fullcatalog.html">Каталог товаров</a>
+      </li>
+      <li class="breadcrumps__item">
+        <a class="breadcrumps__link">Моноподы для селфи</a>
+      </li>
+    </ul>
+  </header>
+
+  <section class="goods">
+    <section class="goods__selection selection">
+      <p class="selection__title">Фильтр:</p>
+      <form class="selection__form  filter-form">
+        <div class="filter-form__item">
+          <h2 class="filter-form__title">Стоимость</h2>
+          <!-- Я пока не умею делать такой ползунок. Гугл говорит, что это js, поэтому пока по-простому. -->
+          <input class="filter-form__range" type="range" multiple min="0" max="100000" value="price">
+        </div>
+        <div class="filter-form__item">
+          <h2 class="filter-form__title">Цвет</h2>
+          <div class="filter-form__checkbox-list">
+            <div class="filter-form__checkbox-item  input-checkbox">
+              <input class="input-checkbox__input" id="black" type="checkbox" name="black" checked>
+              <label class="input-checkbox__description" for="black">Черный</label>
+            </div>
+            <div class="filter-form__checkbox-item  input-checkbox">
+              <input class="input-checkbox__input" id="white" type="checkbox" name="white">
+              <label class="input-checkbox__description" for="white">Белый</label>
+            </div>
+            <div class="filter-form__checkbox-item  input-checkbox">
+              <input class="input-checkbox__input" id="blue" type="checkbox" name="blue" checked>
+              <label class="input-checkbox__description" for="blue">Синий</label>
+            </div>
+            <div class="filter-form__checkbox-item  input-checkbox">
+              <input class="input-checkbox__input" id="red" type="checkbox" name="red" checked>
+              <label class="input-checkbox__description" for="red">Красный</label>
+            </div>
+            <div class="filter-form__checkbox-item  input-checkbox">
+              <input class="input-checkbox__input" id="pink" type="checkbox" name="pink">
+              <label class="input-checkbox__description" for="pink">Розовый</label>
+            </div>
+          </div>
+        </div>
+        <div class="filter-form__item">
+          <h2 class="filter-form__title">Тип</h2>
+          <div class="filter-form__radio-list">
+            <div class="filter-form__radio-item  input-radio">
+              <input class="input-radio__input" id="bluetooth-yes" type="radio" name="bluetooth" value="yes" checked>
+              <label class="input-radio__description" for="bluetooth-yes">Есть</label>
+            </div>
+            <div class="form__radio-item  input-radio">
+              <input class="input-radio__input" id="bluetooth-no" type="radio" name="bluetooth" value="no">
+              <label class="input-radio__description" for="bluetooth-no">Нет</label>
+            </div>
+          </div>
+        </div>
+        <input class="filter-form__submit  button" type="submit" value="Показать">
+      </form>
+    </section>
+
+    <section class="goods__list  goods-list">
+      <header class="goods-list__header">
+        <p class="goods-list__title">Сортировка:</p>
+        <ul class="goods-list__sorting">
+          <li class="goods-list__item">
+            <a class="goods-list__link">По цене</a>
+          </li>
+          <li class="goods-list__item">
+            <a class="goods-list__link">По типу</a>
+          </li>
+          <li class="goods-list__item">
+            <a class="goods-list__link">По популярности</a>
+          </li>
+        </ul>
+
+      </header>
+    </section>
+  </section>
+
+
+</main>
+
+<footer class="page-footer  footer">
+  <div class="footer__top  wrapper">
+    <a class="footer__logo  site-logo  link" href="index.html">
+      <span class="site-logo__visual">device</span>
+      <span class="visually-hidden">Логотип Device</span>
+    </a>
+    <ul class="footer__user-list  user-menu">
+      <li class="user-menu__item">
+        <a class="user-menu__link  user-menu__no-user  link" href="login.html">
+          <span class="user-menu__text  user-menu__text--user">Войти</span>
+        </a>
+        <a class="user-menu__link  user-menu__user-logged  link" href="profile.html">
+          <span class="user-menu__text  user-menu__text--user">Валентин Петухов</span>
+        </a>
+        <a class="user-menu__link  user-menu__user-logged  link" href="logout.html">
+          <span class="user-menu__text  user-menu__text--exit">Выйти</span>
+        </a>
+      </li>
+      <li class="user-menu__item">
+        <a class="user-menu__link  link" href="compare.html">
+          <span class="user-menu__text  user-menu__text--compare">Сравнить</span>
+        </a>
+      </li>
+      <li class="user-menu__item">
+        <a class="user-menu__link  link" href="cart.html">
+          <span class="user-menu__text  user-menu__text--cart">Корзина</span>
+        </a>
+      </li>
+    </ul>
+  </div>
+  <div class="footer__middle  wrapper">
+    <p class="footer__text">г. Москва, ул. Строителей, 15</p>
+    <ul class="footer__site-list  main-menu">
+      <li class="main-menu__item">
+        <a class="main-menu__link  link">Доставка</a>
+      </li>
+      <li class="main-menu__item">
+        <a class="main-menu__link  link">Гарантия</a>
+      </li>
+      <li class="main-menu__item">
+        <a class="main-menu__link  link">Контакты</a>
+      </li>
+    </ul>
+    <p class="footer__text">Тел.: +7 (495) 495-95-95</p>
+  </div>
+  <div class="footer__bottom  wrapper">
+    <div class="footer__social social">
+      <h3 class="visually-hidden">Давайте дружить!</h3>
+      <ul class="social__list">
+        <li class="social__item">
+          <a class="social__link social__link--fb" href="https://www.facebook.com/htmlacademy"><span class="visually-hidden">Мы на Фейсбуке</span></a>
+        </li>
+        <li class="social__item">
+          <a class="social__link social__link--in" href="https://www.instagram.com/htmlacademy/"><span class="visually-hidden">Мы в Инстаграме</span></a>
+        </li>
+        <li class="social__item">
+          <a class="social__link social__link--tw" href="https://twitter.com/htmlacademy_ru"><span class="visually-hidden">Мы в Твиттере</span></a>
+        </li>
+      </ul>
+    </div>
+    <a class="footer__copyright copyright" href="https://htmlacademy.ru/intensive/htmlcss">
+      <img class="copyright__image" src="http://placehold.it/27x35" width="27" height="35" alt="Логотип HTML-Academy">
+      <span class="visually-hidden">Разработано в HTML-Academy</span>
+    </a>
+  </div>
+</footer>
+
+</body>
+</html>
