@@ -1,0 +1,29 @@
+{
+  "name": "device-project",
+  "version": "1.0.0",
+  "description": "Training project in HTML-Academy",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "gulp serve"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Redrica/123355-device.git"
+  },
+  "keywords": [
+    "study",
+    "html",
+    "css"
+  ],
+  "author": "Elizaveta Vinokurova",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Redrica/123355-device/issues"
+  },
+  "homepage": "https://github.com/Redrica/123355-device#readme",
+  "devDependencies": {
+    "browser-sync": "^2.23.6",
+    "gulp": "^3.9.1"
+  }
+}
