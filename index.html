@@ -5,8 +5,9 @@
   <title>HTML Academy: Девайс</title>
 </head>
 <body>
+
 <header class="page-header">
-  <div class="page-header__wrapper">
+  <div class="wrapper">
     <nav class="main-nav">
       <a class="main-nav__logo  site-logo  link">device</a>
       <form class="main-nav__search  form-search" action="#" method="get">
@@ -39,21 +40,21 @@
         <li class="main-menu__item  main-menu__item--catalog">
           <ul class="main-menu__list  catalog-list">
             <li class="catalog-list__item">
-              <ul class="catalog-list__section  goods-list">
-                <li class="goods-list__item"><a class="goods-list__link" href="catalog-virtual.html">Виртуальная реальность</a></li>
-                <li class="goods-list__item"><a class="goods-list__link" href="catalog-selfie.html">Моноподы для селфи</a></li>
-                <li class="goods-list__item"><a class="goods-list__link" href="catalog-action.html">Экшен-камеры</a></li>
+              <ul class="catalog-list__section  catalog-menu">
+                <li class="catalog-menu__item"><a class="catalog-menu__link  link" href="catalog-virtual.html">Виртуальная реальность</a></li>
+                <li class="catalog-menu__item"><a class="catalog-menu__link  link" href="catalog-selfie.html">Моноподы для селфи</a></li>
+                <li class="catalog-menu__item"><a class="catalog-menu__link  link" href="catalog-action.html">Экшен-камеры</a></li>
               </ul>
             </li>
             <li class="catalog-list__item">
-              <ul class="catalog-list__section  goods-list">
-                <li class="goods-list__item"><a class="goods-list__link" href="catalog-fitness.html">Фитнес-браслеты</a></li>
-                <li class="goods-list__item"><a class="goods-list__link" href="catalog-watch.html">Умные часы</a></li>
+              <ul class="catalog-list__section  catalog-menu">
+                <li class="catalog-menu__item"><a class="catalog-menu__link  link" href="catalog-fitness.html">Фитнес-браслеты</a></li>
+                <li class="catalog-menu__item"><a class="catalog-menu__link  link" href="catalog-watch.html">Умные часы</a></li>
               </ul>
             </li>
             <li class="catalog-list__item">
-              <ul class="catalog-list__section  goods-list">
-                <li class="goods-list__item"><a class="goods-list__link" href="catalog-copter.html">Квадрокоптеры</a></li>
+              <ul class="catalog-list__section  catalog-menu">
+                <li class="catalog-menu__item"><a class="catalog-menu__link  link" href="catalog-copter.html">Квадрокоптеры</a></li>
               </ul>
             </li>
           </ul>
@@ -69,24 +70,25 @@
         </li>
       </ul>
     </nav>
-    <section class="page-header__slider  promo-slider">
+
+    <ul class="page-header__slider  slider-promo">
       <h2 class="visually-hidden">Наши лучшие товары</h2>
-      <div class="promo-slider__item  promo-slider__item-1">
-        <div class="promo-slider__image">
-          <img class="promo-slider__picture" src="http://placehold.it/384x486" width="384" height="486" alt="Самая длинная палка для селфи">
+      <li class="slider-promo__item  slider-promo__item-1">
+        <div class="slider-promo__picture">
+          <img class="slider-promo__image" src="http://placehold.it/384x486" width="384" height="486" alt="Самая длинная палка для селфи">
         </div>
-        <div class="promo-slider__info">
-          <b class="promo-slider__slogan">Делай селфи,<br>как Бен Стиллер!</b>
-          <p class="promo-slider__text">Самая длинная палка для селфи доступна в нашем магазине.<br> Восемь (Восемь, Карл!) метров длиной и весом всего 5 килограмм.</p>
-          <a class="promo-slider__btn  btn">подробнее</a>
-          <div class="promo-slider__transition">
-            <form class="promo-slider__form  slider-transition">
+        <div class="slider-promo__info">
+          <b class="slider-promo__slogan">Делай селфи,<br>как Бен Стиллер!</b>
+          <p class="slider-promo__text">Самая длинная палка для селфи доступна в нашем магазине.<br> Восемь (Восемь, Карл!) метров длиной и весом всего 5 килограмм.</p>
+          <a class="slider-promo__btn  btn">подробнее</a>
+          <div class="slider-promo__transition">
+            <form class="slider-promo__form  slider-transition">
               <label class="slider-transition__item"><input class="slider-transition__input  slider-transition__input-1" type="radio" name="slider" value="slide-1" checked></label>
               <label class="slider-transition__item"><input class="slider-transition__input  slider-transition__input-2" type="radio" name="slider" value="slide-2"></label>
               <label class="slider-transition__item"><input class="slider-transition__input  slider-transition__input-3" type="radio" name="slider" value="slide-3"></label>
             </form>
           </div>
-          <table class="promo-slider__properties  goods-properties">
+          <table class="slider-promo__properties  goods-properties">
             <tr>
               <td class="goods-properties__value">8,5 м</td>
               <td class="goods-properties__value">5 кг</td>
@@ -99,23 +101,23 @@
             </tr>
           </table>
         </div>
-      </div>
-      <div class="promo-slider__item  promo-slider__item-2">
-        <div class="promo-slider__image">
-          <img class="promo-slider__picture" src="http://placehold.it/345x485" width="345" height="485" alt="Мотивирующий фитнес-браслет">
+      </li>
+      <li class="slider-promo__item  slider-promo__item-2">
+        <div class="slider-promo__picture">
+          <img class="slider-promo__image" src="http://placehold.it/345x485" width="345" height="485" alt="Мотивирующий фитнес-браслет">
         </div>
-        <div class="promo-slider__info">
-          <b class="promo-slider__slogan">Худеем<br>правильно!</b>
-          <p class="promo-slider__text">Мотивирующие фитнес-браслеты помогут найти в себе силы<br>не пропускать занятия и соблюдать диету.</p>
-          <a class="promo-slider__btn  btn">подробнее</a>
-          <div class="promo-slider__transition">
-            <form class="promo-slider__form  slider-transition">
+        <div class="slider-promo__info">
+          <b class="slider-promo__slogan">Худеем<br>правильно!</b>
+          <p class="slider-promo__text">Мотивирующие фитнес-браслеты помогут найти в себе силы<br>не пропускать занятия и соблюдать диету.</p>
+          <a class="slider-promo__btn  btn">подробнее</a>
+          <div class="slider-promo__transition">
+            <form class="slider-promo__form  slider-transition">
               <label class="slider-transition__item"><input class="slider-transition__input  slider-transition__input-1" type="radio" name="slider" value="slide-1"></label>
               <label class="slider-transition__item"><input class="slider-transition__input  slider-transition__input-2" type="radio" name="slider" value="slide-2" checked></label>
               <label class="slider-transition__item"><input class="slider-transition__input  slider-transition__input-3" type="radio" name="slider" value="slide-3"></label>
             </form>
           </div>
-          <table class="promo-slider__properties  goods-properties">
+          <table class="slider-promo__properties  goods-properties">
             <tr>
               <td class="goods-properties__value">48 часов</td>
             </tr>
@@ -124,23 +126,23 @@
             </tr>
           </table>
         </div>
-      </div>
-      <div class="promo-slider__item  promo-slider__item-3">
-        <div class="promo-slider__image">
-          <img class="promo-slider__picture" src="http://placehold.it/526x334" width="526" height="334" alt="Крутой квадрокоптер">
+      </li>
+      <li class="slider-promo__item  slider-promo__item-3">
+        <div class="slider-promo__picture">
+          <img class="slider-promo__image" src="http://placehold.it/526x334" width="526" height="334" alt="Крутой квадрокоптер">
         </div>
-        <div class="promo-slider__info">
-          <b class="promo-slider__slogan">Порхает как бабочка,<br>жалит как пчела!</b>
-          <p class="promo-slider__text">Этот обычный, на первый взгляд, квадрокоптер оснащен<br>мощным лазером, замаскированным под стандартную камеру.</p>
-          <a class="promo-slider__btn  btn">подробнее</a>
-          <div class="promo-slider__transition">
-            <form class="promo-slider__form  slider-transition">
+        <div class="slider-promo__info">
+          <b class="slider-promo__slogan">Порхает как бабочка,<br>жалит как пчела!</b>
+          <p class="slider-promo__text">Этот обычный, на первый взгляд, квадрокоптер оснащен<br>мощным лазером, замаскированным под стандартную камеру.</p>
+          <a class="slider-promo__btn  btn">подробнее</a>
+          <div class="slider-promo__transition">
+            <form class="slider-promo__form  slider-transition">
               <label class="slider-transition__item"><input class="slider-transition__input  slider-transition__input-1" type="radio" name="slider" value="slide-1"></label>
               <label class="slider-transition__item"><input class="slider-transition__input  slider-transition__input-2" type="radio" name="slider" value="slide-2"></label>
               <label class="slider-transition__item"><input class="slider-transition__input  slider-transition__input-3" type="radio" name="slider" value="slide-3" checked></label>
             </form>
           </div>
-          <table class="promo-slider__properties  goods-properties">
+          <table class="slider-promo__properties  goods-properties">
             <tr>
               <td class="goods-properties__value">800 метров</td>
               <td class="goods-properties__value">50 метров</td>
@@ -151,11 +153,66 @@
             </tr>
           </table>
         </div>
-      </div>
-    </section>
+      </li>
+    </ul>
   </div>
 </header>
 
+<main class="page-main">
+  <ul class="popular  wrapper">
+    <li class="popular__item"><a class="popular__link  link" href="catalog-virtual.html"><h3 class="popular__title">Виртуальная реальность</h3></a></li>
+    <li class="popular__item"><a class="popular__link  link" href="catalog-selfie.html"><h3 class="popular__title">Моноподы для селфи</h3></a></li>
+    <li class="popular__item"><a class="popular__link  link" href="catalog-action.html"><h3 class="popular__title">Экшен-камеры</h3></a></li>
+    <li class="popular__item"><a class="popular__link  link" href="catalog-fitness.html"><h3 class="popular__title">Фитнес-браслеты</h3></a></li>
+    <li class="popular__item"><a class="popular__link  link" href="catalog-watch.html"><h3 class="popular__title">Умные часы</h3></a></li>
+    <li class="popular__item"><a class="popular__link  link" href="catalog-copter.html"><h3 class="popular__title">Квадрокоптеры</h3></a></li>
+  </ul>
 
+  <section class="service">
+    <h2 class="visually-hidden">Наш сервис работает для вас!</h2>
+    <!-- Не совсем понимаю, как лучше сделать. Возможно имеет смысле вынести "навигацию" слайдера в отдельный блок, а не на каждом слайде отображать -->
+    <ul class="service__slider  slider-service  wrapper">
+      <li class="slider-service__item  slider-service__item-1">
+        <ul class="slider-service__transition">
+          <li class="slider-service__point"><button class="slider-service__btn  btn">доставка</button></li>
+          <li class="slider-service__point"><button class="slider-service__btn  btn">гарантия</button></li>
+          <li class="slider-service__point"><button class="slider-service__btn  btn">кредит</button></li>
+        </ul>
+        <div class="slider-service__info">
+          <h3 class="slider-service__title">Доставка</h3>
+          <p class="slider-service__text">Мы с удовольствием доставим ваш товар прямо к вашему подъезду совершенно бесплатно! Ведь мы неплохо заработаем, поднимая его на ваш этаж.</p>
+        </div>
+      </li>
+
+      <li class="slider-service__item  slider-service__item-2">
+        <ul class="slider-service__transition">
+          <li class="slider-service__point"><button class="slider-service__btn  btn">доставка</button></li>
+          <li class="slider-service__point"><button class="slider-service__btn  btn">гарантия</button></li>
+          <li class="slider-service__point"><button class="slider-service__btn  btn">кредит</button></li>
+        </ul>
+        <div class="slider-service__info">
+          <h3 class="slider-service__title">Гарантия</h3>
+          <p class="slider-service__text">Если из-за возгорания купленного у нас товара у вас сгорит дом — не переживайте, мы выдадим вам новый.<br>Товар, не дом, конечно же.</p>
+        </div>
+      </li>
+
+      <li class="slider-service__item  slider-service__item-3">
+        <ul class="slider-service__transition">
+          <li class="slider-service__point"><button class="slider-service__btn  btn">доставка</button></li>
+          <li class="slider-service__point"><button class="slider-service__btn  btn">гарантия</button></li>
+          <li class="slider-service__point"><button class="slider-service__btn  btn">кредит</button></li>
+        </ul>
+        <div class="slider-service__info">
+          <h3 class="slider-service__title">Кредит</h3>
+          <p class="slider-service__text">Залезть в долговую яму стало проще! Кредитные консультанты подберут для вас наиболее выгодные условия кредита. Выгодные для нашего банка, разумеется.</p>
+        </div>
+      </li>
+
+
+
+
+    </ul>
+  </section>
+</main>
 </body>
 </html>
