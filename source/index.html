@@ -10,42 +10,28 @@
 <header class="page-header wrapper">
   <h1 class="visually-hidden">Магазин гаджетов на все случаи жизни</h1>
   <nav class="main-nav">
-    <a class="main-nav__logo  site-logo  link">
-      <span class="site-logo__visual">device</span>
-      <span class="visually-hidden">Логотип Device</span>
-    </a>
-    <form class="main-nav__search  form-search" action="#" method="get">
+    <a class="main-nav__logo  site-logo  link" href="index.html">Device</a>
+    <form class="main-nav__search  form-search" method="get" action="https://echo.htmlacademy.ru">
       <input class="form-search__field" type="search" placeholder="поиск по сайту">
       <input class="form-search__button button-search" type="submit" value="Найти">
     </form>
     <ul class="main-nav__user-list  user-menu">
       <li class="user-menu__item">
-        <!-- Не совсем поняла задачу, поэтому отображение для авторизованного и неавторизованного пользователя пока дублируют друг друга. Если они просто на разных страницах будут без реализации авторизации – то переделаю. -->
-        <a class="user-menu__link  user-menu__no-user  link" href="login.html">
-          <span class="user-menu__text  user-menu__text--user">Войти</span>
-        </a>
-        <a class="user-menu__link  user-menu__user-logged  link" href="profile.html">
-          <span class="user-menu__text  user-menu__text--user">Валентин Петухов</span>
-        </a>
-        <a class="user-menu__link  user-menu__user-logged  link" href="logout.html">
-          <span class="user-menu__text  user-menu__text--exit">Выйти</span>
-        </a>
+        <!-- себе: иконка пользователя – ПЭ отдельно от имени пользователя (тк он тоже обернут в ссылку на профиль) и отдельно от Войти-->
+        <a class="user-menu__link  user-menu__user  hidden  link" href="profile.html">Валентин Петухов</a>
+        <a class="user-menu__link  user-menu__login  visible  link" href="#">Войти</a>
+        <a class="user-menu__link  user-menu__logout  hidden  link" href="#">Выйти</a>
       </li>
       <li class="user-menu__item">
-        <a class="user-menu__link  link" href="compare.html">
-          <span class="user-menu__text  user-menu__text--compare">Сравнить</span>
-        </a>
+        <a class="user-menu__link  user-menu__link--compare  link" href="compare.html">Сравнить</a>
       </li>
       <li class="user-menu__item">
-        <a class="user-menu__link  link" href="cart.html">
-          <span class="user-menu__text  user-menu__text--cart">Корзина</span>
-        </a>
+        <a class="user-menu__link  user-menu__link-cart  link" href="cart.html">Корзина</a>
       </li>
     </ul>
     <ul class="main-nav__site-list  main-menu">
       <li class="main-menu__item  main-menu__item--catalog">
         <a class="main-menu__link  link" href="fullcatalog.html">Каталог</a>
-        <button class="main-menu__toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
         <ul class="main-menu__list  catalog-list">
           <li class="catalog-list__item">
             <ul class="catalog-list__section  catalog-menu">
@@ -53,7 +39,7 @@
                 <a class="catalog-menu__link  link" href="catalog-virtual.html">Виртуальная реальность</a>
               </li>
               <li class="catalog-menu__item">
-                <a class="catalog-menu__link  link" href="catalog-selfie.html">Моноподы для селфи</a>
+                <a class="catalog-menu__link  link" href="catalog.html">Моноподы для селфи</a>
               </li>
               <li class="catalog-menu__item">
                 <a class="catalog-menu__link  link" href="catalog-action.html">Экшен-камеры</a>
@@ -91,9 +77,14 @@
     </ul>
   </nav>
 
-  <ul class="page-header__slider  slider-promo">
+  <section class="page-header__slider  slider-promo">
     <h2 class="visually-hidden">Наши лучшие товары</h2>
-    <li class="slider-promo__item  slider-promo__item-1">
+    <div class="slider-promo__transition  slider-transition">
+      <label class="slider-transition__item"><input class="slider-transition__input" type="radio" name="slider" value="slide-1"  checked></label>
+      <label class="slider-transition__item"><input class="slider-transition__input" type="radio" name="slider" value="slide-2"></label>
+      <label class="slider-transition__item"><input class="slider-transition__input" type="radio" name="slider" value="slide-3"></label>
+    </div>
+    <article class="slider-promo__item  slider-promo__item-1">
       <div class="slider-promo__picture">
         <img class="slider-promo__image" src="http://placehold.it/384x486" width="384" height="486" alt="Самая длинная палка для селфи">
       </div>
@@ -101,11 +92,6 @@
         <b class="slider-promo__slogan">Делай селфи,<br>как Бен Стиллер!</b>
         <p class="slider-promo__text">Самая длинная палка для селфи доступна в нашем магазине. Восемь (Восемь, Карл!) метров длиной и весом всего 5 килограмм.</p>
         <a class="slider-promo__button  button">подробнее</a>
-        <div class="slider-promo__transition  slider-transition">
-          <label class="slider-transition__item"><input class="slider-transition__input  slider-transition__input-1" type="radio" name="slider" value="slide-1"></label>
-          <label class="slider-transition__item"><input class="slider-transition__input  slider-transition__input-2" type="radio" name="slider" value="slide-2"></label>
-          <label class="slider-transition__item"><input class="slider-transition__input  slider-transition__input-3" type="radio" name="slider" value="slide-3" checked></label>
-        </div>
         <table class="slider-promo__properties  goods-properties">
           <tr>
             <td class="goods-properties__value">8,5 м</td>
@@ -119,8 +105,8 @@
           </tr>
         </table>
       </div>
-    </li>
-    <li class="slider-promo__item  slider-promo__item-2">
+    </article>
+    <article class="slider-promo__item  slider-promo__item-2">
       <div class="slider-promo__picture">
         <img class="slider-promo__image" src="http://placehold.it/345x485" width="345" height="485" alt="Мотивирующий фитнес-браслет">
       </div>
@@ -128,11 +114,6 @@
         <b class="slider-promo__slogan">Худеем<br>правильно!</b>
         <p class="slider-promo__text">Мотивирующие фитнес-браслеты помогут найти в себе силы не пропускать занятия и соблюдать диету.</p>
         <a class="slider-promo__button  button">подробнее</a>
-        <div class="slider-promo__transition  slider-transition">
-          <label class="slider-transition__item"><input class="slider-transition__input  slider-transition__input-1" type="radio" name="slider" value="slide-1"></label>
-          <label class="slider-transition__item"><input class="slider-transition__input  slider-transition__input-2" type="radio" name="slider" value="slide-2"></label>
-          <label class="slider-transition__item"><input class="slider-transition__input  slider-transition__input-3" type="radio" name="slider" value="slide-3" checked></label>
-        </div>
         <table class="slider-promo__properties  goods-properties">
           <tr>
             <td class="goods-properties__value">48 часов</td>
@@ -142,8 +123,8 @@
           </tr>
         </table>
       </div>
-    </li>
-    <li class="slider-promo__item  slider-promo__item-3">
+    </article>
+    <article class="slider-promo__item  slider-promo__item-3">
       <div class="slider-promo__picture">
         <img class="slider-promo__image" src="http://placehold.it/526x334" width="526" height="334" alt="Крутой квадрокоптер">
       </div>
@@ -151,11 +132,6 @@
         <b class="slider-promo__slogan">Порхает как бабочка, жалит как пчела!</b>
         <p class="slider-promo__text">Этот обычный, на первый взгляд, квадрокоптер оснащен мощным лазером, замаскированным под стандартную камеру.</p>
         <a class="slider-promo__button  button">подробнее</a>
-        <div class="slider-promo__transition  slider-transition">
-          <label class="slider-transition__item"><input class="slider-transition__input  slider-transition__input-1" type="radio" name="slider" value="slide-1"></label>
-          <label class="slider-transition__item"><input class="slider-transition__input  slider-transition__input-2" type="radio" name="slider" value="slide-2"></label>
-          <label class="slider-transition__item"><input class="slider-transition__input  slider-transition__input-3" type="radio" name="slider" value="slide-3" checked></label>
-        </div>
         <table class="slider-promo__properties  goods-properties">
           <tr>
             <td class="goods-properties__value">800 метров</td>
@@ -167,14 +143,14 @@
           </tr>
         </table>
       </div>
-    </li>
-  </ul>
+    </article>
+  </section>
 </header>
 
 <main class="page-main">
   <ul class="popular  wrapper">
     <li class="popular__item"><a class="popular__link  link" href="catalog-virtual.html"><h3 class="popular__title">Виртуальная реальность</h3></a></li>
-    <li class="popular__item"><a class="popular__link  link" href="catalog-selfie.html"><h3 class="popular__title">Моноподы для селфи</h3></a></li>
+    <li class="popular__item"><a class="popular__link  link" href="catalog.html"><h3 class="popular__title">Моноподы для селфи</h3></a></li>
     <li class="popular__item"><a class="popular__link  link" href="catalog-action.html"><h3 class="popular__title">Экшен-камеры</h3></a></li>
     <li class="popular__item"><a class="popular__link  link" href="catalog-fitness.html"><h3 class="popular__title">Фитнес-браслеты</h3></a></li>
     <li class="popular__item"><a class="popular__link  link" href="catalog-watch.html"><h3 class="popular__title">Умные часы</h3></a></li>
@@ -182,40 +158,31 @@
   </ul>
 
   <section class="service">
-    <h2 class="visually-hidden">Наш сервис работает для вас!</h2>
-    <ul class="service__slider  slider-service  wrapper">
-      <li class="slider-service__transition">
-        <ul class="slider-service__list">
-          <li class="slider-service__point">
-            <button class="slider-service__button  slider-service__button-1  button">доставка</button>
-          </li>
-          <li class="slider-service__point">
-            <button class="slider-service__button  slider-service__button-2  button">гарантия</button>
-          </li>
-          <li class="slider-service__point">
-            <button class="slider-service__button  slider-service__button-2  button">кредит</button>
-          </li>
-        </ul>
-      </li>
-      <li class="slider-service__item  slider-service__item-1">
-        <h3 class="slider-service__title">Доставка</h3>
-        <p class="slider-service__text">Мы с удовольствием доставим ваш товар прямо к вашему подъезду совершенно бесплатно! Ведь мы неплохо заработаем, поднимая его на ваш этаж.</p>
-      </li>
-      <li class="slider-service__item  slider-service__item-2">
-        <h3 class="slider-service__title">Гарантия</h3>
-        <p class="slider-service__text">Если из-за возгорания купленного у нас товара у вас сгорит дом — не переживайте, мы выдадим вам новый.<br>Товар, не дом, конечно же.</p>
-      </li>
-      <li class="slider-service__item  slider-service__item-3">
-        <h3 class="slider-service__title">Кредит</h3>
-        <p class="slider-service__text">Залезть в долговую яму стало проще! Кредитные консультанты подберут для вас наиболее выгодные условия кредита. Выгодные для нашего банка, разумеется.</p>
-      </li>
-    </ul>
+    <div class="service__slider  slider-service  wrapper">
+      <h2 class="visually-hidden">Наш сервис работает для вас!</h2>
+      <div class="slider-service__transition">
+        <button class="slider-service__button  slider-service__button-1  button" type="button">доставка</button>
+        <button class="slider-service__button  slider-service__button-2  button" type="button">гарантия</button>
+        <button class="slider-service__button  slider-service__button-2  button" type="button">кредит</button>
+      </div>
+    </div>
+    <div class="slider-service__item  slider-service__item-1">
+      <h3 class="slider-service__title">Доставка</h3>
+      <p class="slider-service__text">Мы с удовольствием доставим ваш товар прямо к вашему подъезду совершенно бесплатно! Ведь мы неплохо заработаем, поднимая его на ваш этаж.</p>
+    </div>
+      <!--<li class="slider-service__item  slider-service__item-2">-->
+        <!--<h3 class="slider-service__title">Гарантия</h3>-->
+        <!--<p class="slider-service__text">Если из-за возгорания купленного у нас товара у вас сгорит дом — не переживайте, мы выдадим вам новый.<br>Товар, не дом, конечно же.</p>-->
+      <!--</li>-->
+      <!--<li class="slider-service__item  slider-service__item-3">-->
+        <!--<h3 class="slider-service__title">Кредит</h3>-->
+        <!--<p class="slider-service__text">Залезть в долговую яму стало проще! Кредитные консультанты подберут для вас наиболее выгодные условия кредита. Выгодные для нашего банка, разумеется.</p>-->
+      <!--</li>-->
   </section>
 
   <section class="logotypes  wrapper">
     <h2 class="visually-hidden">Наши производители</h2>
     <ul class="logotypes__list">
-      <!-- По-хорошему это должны быть ссылки на все товары данного производителя, но какой им приделать адрес – не соображу -->
       <li class="logotypes__item">
         <a class="logotypes__link" href="#">
           <img class="logotypes__image" src="http://placehold.it/260x100" width="260" height="100" alt="DJI">
@@ -239,8 +206,8 @@
     </ul>
   </section>
 
-  <section class="information  wrapper">
-    <section class="about">
+  <div class="wrapper">
+    <section class="about  info">
       <h2 class="about__title">О нас</h2>
       <p class="about__text">Огромный выбор гаджетов не оставит равнодушным гика, который есть в каждом из нас.</p>
       <p class="about__text">Мы можем доставить ваш товар в самые отдаленные точки России! DEVICE работает со многими транспортными компаниями:</p>
@@ -252,69 +219,58 @@
       <a class="about__link  button  link" href="about.html">Подробнее о нас</a>
     </section>
 
-    <section class="contacts">
-      <h2 class="contacts__title">Контакты</h2>
-      <p class="contacts__text">Вы можете забрать товар сами, заехав в наш офис. Заодно, вы сможете проверить работоспособность покупки. Всякое бывает.</p>
-      <img class="contacts__map" src="http://placehold.it/560x222" width="560" height="222" alt="Карта проезда">
-      <a class="contacts__link  button  link" href="write.html">Напишите нам</a>
+    <section class="about  contacts">
+      <h2 class="about__title">Контакты</h2>
+      <p class="about__text">Вы можете забрать товар сами, заехав в наш офис. Заодно, вы сможете проверить работоспособность покупки. Всякое бывает.</p>
+      <img class="about__map" src="http://placehold.it/560x222" width="560" height="222" alt="Карта проезда">
+      <a class="about__link  button  link" href="write.html">Напишите нам</a>
     </section>
 
-    <div class="information__map  map-modal">
+    <div class="map-modal">
+      <button class="map-modal__close  close-icon" type="button">
+        <span class="visually-hidden">Закрыть карту</span>
+      </button>
+      <h2 class="visually-hidden">Как до нас добраться</h2>
       <div class="map-modal__picture"></div>
-      <!-- Если на псевдоэлемент можно повесить функцию закрытия(?) – то лучше конечно кнопку закрытия через него сделать -->
-      <div class="map-modal__close  close-icon"></div>
     </div>
 
-    <div class="information__write  write-us">
-      <form class="write-us__form">
-        <ul class="write-us__list">
-          <li class="write-us__item  input-text">
+    <div class="write-us">
+      <button class="write-us__close  close-icon" type="button">
+        <span class="visually-hidden">Закрыть форму отправки сообщения</span>
+      </button>
+      <form class="write-us__form" method="post" action="https://echo.htmlacademy.ru">
+          <div class="write-us__item  input-text">
             <label class="input-text__description" for="name">Ваше имя</label>
             <input class="input-text__field" type="text" id="name" name="name" placeholder="Имя Фамилия" required>
-          </li>
-          <li class="write-us__item  input-text">
+          </div>
+          <div class="write-us__item  input-text">
             <label class="input-text__description" for="email">Ваш e-mail</label>
             <input class="input-text__field" type="text" id="email" name="email" placeholder="email@example.com" required>
-          </li>
-          <li class="write-us__item  input-text  input-textarea">
+          </div>
+          <div class="write-us__item  input-text">
             <label class="input-text__description" for="letter">Текст письма</label>
             <textarea class="input-text__field" id="letter" name="letter" rows="7" placeholder="В свободной форме"></textarea>
-          </li>
-        </ul>
+          </div>
         <input class="write-us__submit  button" type="submit" value="Отправить">
       </form>
-      <div class="information__write  close-icon"></div>
     </div>
-  </section>
+  </div>
 </main>
 
 <footer class="page-footer  footer">
   <div class="footer__top  wrapper">
-    <a class="footer__logo  site-logo  link">
-      <span class="site-logo__visual">device</span>
-      <span class="visually-hidden">Логотип Device</span>
-    </a>
+    <a class="footer__logo  site-logo  link" href="index.html">Device</a>
     <ul class="footer__user-list  user-menu">
       <li class="user-menu__item">
-        <a class="user-menu__link  user-menu__no-user  link" href="login.html">
-          <span class="user-menu__text  user-menu__text--user">Войти</span>
-        </a>
-        <a class="user-menu__link  user-menu__user-logged  link" href="profile.html">
-          <span class="user-menu__text  user-menu__text--user">Валентин Петухов</span>
-        </a>
-        <a class="user-menu__link  user-menu__user-logged  link" href="logout.html">
-          <span class="user-menu__text  user-menu__text--exit">Выйти</span>
-        </a>
+        <a class="user-menu__link  user-menu__user  hidden  link" href="profile.html">Валентин Петухов</a>
+        <a class="user-menu__link  user-menu__login  visible  link" href="#">Войти</a>
+        <a class="user-menu__link  user-menu__logout  hidden  link" href="#">Выйти</a>
       </li>
       <li class="user-menu__item">
-        <a class="user-menu__link  link" href="compare.html">
-          <span class="user-menu__text  user-menu__text--compare">Сравнить</span>
-        </a>
+        <a class="user-menu__link  user-menu__link--compare  link" href="compare.html">Сравнить</a>
       </li>
       <li class="user-menu__item">
-        <a class="user-menu__link  link" href="cart.html">
-          <span class="user-menu__text  user-menu__text--cart">Корзина</span>
-        </a>
+        <a class="user-menu__link  user-menu__link-cart  link" href="cart.html">Корзина</a>
       </li>
     </ul>
   </div>
@@ -335,7 +291,7 @@
   </div>
   <div class="footer__bottom  wrapper">
     <div class="footer__social social">
-      <h3 class="visually-hidden">Давайте дружить!</h3>
+      <h2 class="visually-hidden">Давайте дружить!</h2>
       <ul class="social__list">
         <li class="social__item">
           <a class="social__link social__link--fb" href="https://www.facebook.com/htmlacademy"><span class="visually-hidden">Мы на Фейсбуке</span></a>
@@ -354,6 +310,8 @@
     </a>
   </div>
 </footer>
+
+<script src="js/authorization.js"></script>
 
 </body>
 </html>

@@ -1,15 +1,16 @@
 var gulp = require('gulp');
-var server = require("browser-sync").create();
+var server = require('browser-sync').create();
 
-gulp.task("serve", function() {
+gulp.task('serve', function() {
   server.init({
-    server: "source/",
+    server: 'source/',
     notify: false,
     open: true,
     cors: true,
     ui: false
   });
 
-  gulp.watch("source/*.html").on("change", server.reload);
+  gulp.watch('source/*.html').on('change', server.reload);
+  gulp.watch('source/css/*.css').on('change', server.reload);
 });
 
