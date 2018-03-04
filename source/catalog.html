@@ -16,9 +16,9 @@
     </form>
     <ul class="main-nav__user-list  user-menu">
       <li class="user-menu__item">
-        <a class="user-menu__link  user-menu__user  hidden  link" href="profile.html">Валентин Петухов</a>
-        <a class="user-menu__link  user-menu__login  visible  link" href="#">Войти</a>
-        <a class="user-menu__link  user-menu__logout  hidden  link" href="#">Выйти</a>
+        <a class="user-menu__link  hidden  link" href="profile.html">Валентин Петухов</a>
+        <a class="user-menu__link  visible  link" href="#">Войти</a>
+        <a class="user-menu__link  hidden  link" href="#">Выйти</a>
       </li>
       <li class="user-menu__item">
         <a class="user-menu__link  user-menu__link--compare  link" href="compare.html">Сравнить</a>
@@ -99,58 +99,57 @@
         <div class="filter-form__item">
           <h3 class="filter-form__title">Стоимость</h3>
           <div class="filter-form__range  range-input">
-            <div class="range-input__bar-left"></div>
-            <div class="range-input__bar-right"></div>
-            <div class="range-input__position-left"></div>
-            <div class="range-input__position-right"></div>
+            <div class="range-input__bar"></div>
+            <div class="range-input__bar  range-input__bar--mod"></div>
+            <div class="range-input__position"></div>
+            <div class="range-input__position"></div>
           </div>
-          <div class="filter-form_range-value  value-input">
+          <div class="filter-form__range-value  value-input">
             <label class="value-input__description">от
               <input class="value-input__input" type="text" placeholder="0">
             </label>
           </div>
-          <div class="filter-form_range-value  value-input">
+          <div class="filter-form__range-value  value-input">
             <label class="value-input__description">до
               <input class="value-input__input" type="text" placeholder="5000">
             </label>
           </div>
-
         </div>
         <div class="filter-form__item">
           <h3 class="filter-form__title">Цвет</h3>
           <div class="filter-form__checkbox-list">
-            <div class="filter-form__checkbox-item  input-checkbox">
-              <input class="input-checkbox__input" id="black" type="checkbox" name="black" checked>
-              <label class="input-checkbox__description" for="black">Черный</label>
+            <div class="filter-form__checkbox-item  filter-input">
+              <input class="filter-input__input" id="black" type="checkbox" name="black" checked>
+              <label class="filter-input__description" for="black">Черный</label>
             </div>
-            <div class="filter-form__checkbox-item  input-checkbox">
-              <input class="input-checkbox__input" id="white" type="checkbox" name="white">
-              <label class="input-checkbox__description" for="white">Белый</label>
+            <div class="filter-form__checkbox-item  filter-input">
+              <input class="filter-input__input" id="white" type="checkbox" name="white">
+              <label class="filter-input__description" for="white">Белый</label>
             </div>
-            <div class="filter-form__checkbox-item  input-checkbox">
-              <input class="input-checkbox__input" id="blue" type="checkbox" name="blue" checked>
-              <label class="input-checkbox__description" for="blue">Синий</label>
+            <div class="filter-form__checkbox-item  filter-input">
+              <input class="filter-input__input" id="blue" type="checkbox" name="blue" checked>
+              <label class="filter-input__description" for="blue">Синий</label>
             </div>
-            <div class="filter-form__checkbox-item  input-checkbox">
-              <input class="input-checkbox__input" id="red" type="checkbox" name="red" checked>
-              <label class="input-checkbox__description" for="red">Красный</label>
+            <div class="filter-form__checkbox-item  filter-input">
+              <input class="filter-input__input" id="red" type="checkbox" name="red" checked>
+              <label class="filter-input__description" for="red">Красный</label>
             </div>
-            <div class="filter-form__checkbox-item  input-checkbox">
-              <input class="input-checkbox__input" id="pink" type="checkbox" name="pink">
-              <label class="input-checkbox__description" for="pink">Розовый</label>
+            <div class="filter-form__checkbox-item  filter-input">
+              <input class="filter-input__input" id="pink" type="checkbox" name="pink">
+              <label class="filter-input__description" for="pink">Розовый</label>
             </div>
           </div>
         </div>
         <div class="filter-form__item">
           <h3 class="filter-form__title">Тип</h3>
           <div class="filter-form__radio-list">
-            <div class="filter-form__radio-item  input-radio">
-              <input class="input-radio__input" id="bluetooth-yes" type="radio" name="bluetooth" value="yes" checked>
-              <label class="input-radio__description" for="bluetooth-yes">Есть</label>
+            <div class="filter-form__radio-item  filter-input">
+              <input class="filter-input__input" id="bluetooth-yes" type="radio" name="bluetooth" value="yes" checked>
+              <label class="filter-input__description" for="bluetooth-yes">Есть</label>
             </div>
-            <div class="form__radio-item  input-radio">
-              <input class="input-radio__input" id="bluetooth-no" type="radio" name="bluetooth" value="no">
-              <label class="input-radio__description" for="bluetooth-no">Нет</label>
+            <div class="form__radio-item  filter-input">
+              <input class="filter-input__input" id="bluetooth-no" type="radio" name="bluetooth" value="no">
+              <label class="filter-input__description" for="bluetooth-no">Нет</label>
             </div>
           </div>
         </div>
@@ -172,12 +171,12 @@
             <a class="list-header__sorting-link  link" href="#">По популярности</a>
           </li>
           <li class="list-header__sorting-name">
-            <button class="list-header__sorting-button  sorting-button  sorting-button--up" type="button">
+            <a class="list-header__sorting-button  sorting-button  sorting-button--up" href="#">
               <span class="visually-hidden">По возрастанию</span>
-            </button>
-            <button class="list-header__sorting-button  sorting-button  sorting-button--down  sorting-button--checked" type="button">
+            </a>
+            <a class="list-header__sorting-button  sorting-button  sorting-button--down  sorting-button--checked" href="#">
               <span class="visually-hidden">По убыванию</span>
-            </button>
+            </a>
           </li>
         </ul>
       </header>
@@ -290,9 +289,9 @@
     <a class="footer__logo  site-logo  link" href="index.html">Device</a>
     <ul class="footer__user-list  user-menu">
       <li class="user-menu__item">
-        <a class="user-menu__link  user-menu__user  hidden  link" href="profile.html">Валентин Петухов</a>
-        <a class="user-menu__link  user-menu__login  visible  link" href="#">Войти</a>
-        <a class="user-menu__link  user-menu__logout  hidden  link" href="#">Выйти</a>
+        <a class="user-menu__link  hidden  link" href="profile.html">Валентин Петухов</a>
+        <a class="user-menu__link  visible  link" href="#">Войти</a>
+        <a class="user-menu__link  hidden  link" href="#">Выйти</a>
       </li>
       <li class="user-menu__item">
         <a class="user-menu__link  user-menu__link--compare  link" href="compare.html">Сравнить</a>
@@ -338,8 +337,6 @@
     </a>
   </div>
 </footer>
-
-<script src="js/authorization.js"></script>
 
 </body>
 </html>
