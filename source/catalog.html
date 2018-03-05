@@ -147,7 +147,7 @@
               <input class="filter-input__input" id="bluetooth-yes" type="radio" name="bluetooth" value="yes" checked>
               <label class="filter-input__description" for="bluetooth-yes">Есть</label>
             </div>
-            <div class="form__radio-item  filter-input">
+            <div class="filter-form__radio-item  filter-input">
               <input class="filter-input__input" id="bluetooth-no" type="radio" name="bluetooth" value="no">
               <label class="filter-input__description" for="bluetooth-no">Нет</label>
             </div>
@@ -197,7 +197,6 @@
                 </a>
                 <span class="goods-price">500 руб.</span>
               </div>
-              <div class="goods-card__novelty"><span class="visually-hidden">Новинка!</span></div>
             </div>
           </article>
         </li>
@@ -217,7 +216,6 @@
                 </a>
                 <span class="goods-price">1 500 руб.</span>
               </div>
-              <div class="goods-card__novelty"><span class="visually-hidden">Новинка!</span></div>
             </div>
           </article>
         </li>
@@ -237,14 +235,13 @@
                 </a>
                 <span class="goods-price">2 500 руб.</span>
               </div>
-              <div class="goods-card__novelty"><span class="visually-hidden">Новинка!</span></div>
             </div>
           </article>
         </li>
         <li class="goods-list__item">
           <article class="goods-list__card  goods-card">
             <div class="goods-card__wrapper">
-              <div class="goods-card__picture">
+              <div class="goods-card__picture  goods-card__label">
                 <img class="goods-card__image" src="http://placehold.it/360x380" width="360" height="380" alt="Селфи-палка «Следуй за мной»">
                 <div class="goods-card__hover">
                   <button class="goods-card__cart" type="button">В корзину</button>
@@ -257,30 +254,29 @@
                 </a>
                 <span class="goods-price">4 900 руб.</span>
               </div>
-              <div class="goods-card__novelty"><span class="visually-hidden">Новинка!</span></div>
             </div>
           </article>
         </li>
       </ul>
-    </section>
 
-    <footer class="goods-list__footer list-footer">
-      <div class="list-footer__pagination pagination">
-        <a class="pagination__switch  pagination__switch--prev  link" href="#">Назад</a>
-        <ul class="pagination__list  list-pagination">
-          <li class="list-pagination__item">
-            <a class="list-pagination__link  link" href="#">1</a>
-          </li>
-          <li class="list-pagination__item">
-            <a class="list-pagination__link  link" href="#">2</a>
-          </li>
-          <li class="list-pagination__item">
-            <a class="list-pagination__link  link" href="#">3</a>
-          </li>
-        </ul>
-        <a class="pagination__switch  pagination__switch--next  link" href="#">Вперед</a>
-      </div>
-    </footer>
+      <footer class="goods-list__footer list-footer">
+        <div class="list-footer__pagination pagination">
+          <a class="pagination__switch  pagination__switch--prev  link" href="#">Назад</a>
+          <ul class="pagination__list  list-pagination">
+            <li class="list-pagination__item">
+              <a class="list-pagination__link  link" href="#">1</a>
+            </li>
+            <li class="list-pagination__item">
+              <a class="list-pagination__link  link" href="#">2</a>
+            </li>
+            <li class="list-pagination__item">
+              <a class="list-pagination__link  link" href="#">3</a>
+            </li>
+          </ul>
+          <a class="pagination__switch  pagination__switch--next  link" href="#">Вперед</a>
+        </div>
+      </footer>
+    </section>
   </section>
 </main>
 
