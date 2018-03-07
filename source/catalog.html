@@ -94,70 +94,73 @@
 
   <section class="goods">
     <section class="goods__selection selection">
-      <h2 class="selection__title">Фильтр:</h2>
-      <form class="selection__form  filter-form" method="post" action="https://echo.htmlacademy.ru">
-        <div class="filter-form__item">
-          <h3 class="filter-form__title">Стоимость</h3>
-          <div class="filter-form__range  range-input">
-            <div class="range-input__bar"></div>
-            <div class="range-input__bar  range-input__bar--mod"></div>
-            <div class="range-input__position"></div>
-            <div class="range-input__position"></div>
-          </div>
-          <div class="filter-form__range-value  value-input">
-            <label class="value-input__description">от
-              <input class="value-input__input" type="text" placeholder="0">
-            </label>
-          </div>
-          <div class="filter-form__range-value  value-input">
-            <label class="value-input__description">до
-              <input class="value-input__input" type="text" placeholder="5000">
-            </label>
-          </div>
-        </div>
-        <div class="filter-form__item">
-          <h3 class="filter-form__title">Цвет</h3>
-          <div class="filter-form__checkbox-list">
-            <div class="filter-form__checkbox-item  filter-input">
-              <input class="filter-input__input" id="black" type="checkbox" name="black" checked>
-              <label class="filter-input__description" for="black">Черный</label>
+      <div class="selection__wrapper">
+        <h2 class="selection__title">Фильтр:</h2>
+        <form class="selection__form  filter-form" method="post" action="https://echo.htmlacademy.ru">
+          <div class="filter-form__item">
+            <h3 class="filter-form__title">Стоимость</h3>
+            <div class="filter-form__range  range-input">
+              <div class="range-input__bar"></div>
+              <div class="range-input__bar  range-input__bar--mod"></div>
+              <div class="range-input__position"></div>
+              <div class="range-input__position range-input__position--mod"></div>
             </div>
-            <div class="filter-form__checkbox-item  filter-input">
-              <input class="filter-input__input" id="white" type="checkbox" name="white">
-              <label class="filter-input__description" for="white">Белый</label>
+            <div class="filter-form__range-value  value-input">
+              <label class="value-input__description">от
+                <input class="value-input__input" type="text" placeholder="0">
+              </label>
             </div>
-            <div class="filter-form__checkbox-item  filter-input">
-              <input class="filter-input__input" id="blue" type="checkbox" name="blue" checked>
-              <label class="filter-input__description" for="blue">Синий</label>
-            </div>
-            <div class="filter-form__checkbox-item  filter-input">
-              <input class="filter-input__input" id="red" type="checkbox" name="red" checked>
-              <label class="filter-input__description" for="red">Красный</label>
-            </div>
-            <div class="filter-form__checkbox-item  filter-input">
-              <input class="filter-input__input" id="pink" type="checkbox" name="pink">
-              <label class="filter-input__description" for="pink">Розовый</label>
+            <div class="filter-form__range-value  value-input">
+              <label class="value-input__description">до
+                <input class="value-input__input" type="text" placeholder="5000">
+              </label>
             </div>
           </div>
-        </div>
-        <div class="filter-form__item">
-          <h3 class="filter-form__title">Тип</h3>
-          <div class="filter-form__radio-list">
-            <div class="filter-form__radio-item  filter-input">
-              <input class="filter-input__input" id="bluetooth-yes" type="radio" name="bluetooth" value="yes" checked>
-              <label class="filter-input__description" for="bluetooth-yes">Есть</label>
-            </div>
-            <div class="filter-form__radio-item  filter-input">
-              <input class="filter-input__input" id="bluetooth-no" type="radio" name="bluetooth" value="no">
-              <label class="filter-input__description" for="bluetooth-no">Нет</label>
+          <div class="filter-form__item">
+            <h3 class="filter-form__title">Цвет</h3>
+            <div class="filter-form__checkbox-list">
+              <div class="filter-form__checkbox-item  filter-input">
+                <input class="filter-input__input" id="black" type="checkbox" name="black" checked>
+                <label class="filter-input__description" for="black">Черный</label>
+              </div>
+              <div class="filter-form__checkbox-item  filter-input">
+                <input class="filter-input__input" id="white" type="checkbox" name="white">
+                <label class="filter-input__description" for="white">Белый</label>
+              </div>
+              <div class="filter-form__checkbox-item  filter-input">
+                <input class="filter-input__input" id="blue" type="checkbox" name="blue" checked>
+                <label class="filter-input__description" for="blue">Синий</label>
+              </div>
+              <div class="filter-form__checkbox-item  filter-input">
+                <input class="filter-input__input" id="red" type="checkbox" name="red" checked>
+                <label class="filter-input__description" for="red">Красный</label>
+              </div>
+              <div class="filter-form__checkbox-item  filter-input">
+                <input class="filter-input__input" id="pink" type="checkbox" name="pink">
+                <label class="filter-input__description" for="pink">Розовый</label>
+              </div>
             </div>
           </div>
-        </div>
-        <input class="filter-form__submit  button" type="submit" value="Показать">
-      </form>
+          <div class="filter-form__item">
+            <h3 class="filter-form__title">Тип</h3>
+            <div class="filter-form__radio-list">
+              <div class="filter-form__radio-item  filter-input">
+                <input class="filter-input__input" id="bluetooth-yes" type="radio" name="bluetooth" value="yes" checked>
+                <label class="filter-input__description" for="bluetooth-yes">Есть</label>
+              </div>
+              <div class="filter-form__radio-item  filter-input">
+                <input class="filter-input__input" id="bluetooth-no" type="radio" name="bluetooth" value="no">
+                <label class="filter-input__description" for="bluetooth-no">Нет</label>
+              </div>
+            </div>
+          </div>
+          <button class="filter-form__submit  button" type="submit">Показать</button>
+        </form>
+      </div>
     </section>
 
     <section class="goods__list  goods-list">
+      <div class="goods-list__wrapper">
       <header class="goods-list__header list-header">
         <h2 class="list-header__title">Сортировка:</h2>
         <ul class="list-header__sorting-type">
@@ -187,15 +190,15 @@
               <div class="goods-card__picture">
                 <img class="goods-card__image" src="img/catalog-item-1.jpg" width="360" height="380" alt="Любительская палка для селфи">
                 <div class="goods-card__hover">
-                  <button class="goods-card__cart" type="button">В корзину</button>
+                  <button class="goods-card__cart  button" type="button">В корзину</button>
                   <button class="goods-card__compare" type="button">Добавить к сравнению</button>
                 </div>
               </div>
               <div class="goods-card__info">
                 <a class="goods-card__link" href="item-page-1.html">
-                  <h3 class="goods-card__title">Любительская палка для селфи</h3>
+                  <h3 class="goods-card__title">Любительская селфи-палка</h3>
                 </a>
-                <span class="goods-price">500 руб.</span>
+                <span class="goods-card__price">500 руб.</span>
               </div>
             </div>
           </article>
@@ -206,7 +209,7 @@
               <div class="goods-card__picture">
                 <img class="goods-card__image" src="img/catalog-item-2.jpg" width="360" height="380" alt="Профессиональная селфи-палка">
                 <div class="goods-card__hover">
-                  <button class="goods-card__cart" type="button">В корзину</button>
+                  <button class="goods-card__cart  button" type="button">В корзину</button>
                   <button class="goods-card__compare" type="button">Добавить к сравнению</button>
                 </div>
               </div>
@@ -214,7 +217,7 @@
                 <a class="goods-card__link" href="item-page-2.html">
                   <h3 class="goods-card__title">Профессиональная селфи-палка</h3>
                 </a>
-                <span class="goods-price">1 500 руб.</span>
+                <span class="goods-card__price">1 500 руб.</span>
               </div>
             </div>
           </article>
@@ -225,7 +228,7 @@
               <div class="goods-card__picture">
                 <img class="goods-card__image" src="img/catalog-item-3.jpg" width="360" height="380" alt="Непотопляемая селфи-палка">
                 <div class="goods-card__hover">
-                  <button class="goods-card__cart" type="button">В корзину</button>
+                  <button class="goods-card__cart  button" type="button">В корзину</button>
                   <button class="goods-card__compare" type="button">Добавить к сравнению</button>
                 </div>
               </div>
@@ -233,7 +236,7 @@
                 <a class="goods-card__link" href="item-page-3.html">
                   <h3 class="goods-card__title">Непотопляемая селфи-палка</h3>
                 </a>
-                <span class="goods-price">2 500 руб.</span>
+                <span class="goods-card__price">2 500 руб.</span>
               </div>
             </div>
           </article>
@@ -244,7 +247,7 @@
               <div class="goods-card__picture  goods-card__label">
                 <img class="goods-card__image" src="img/catalog-item-4.jpg" width="360" height="380" alt="Селфи-палка «Следуй за мной»">
                 <div class="goods-card__hover">
-                  <button class="goods-card__cart" type="button">В корзину</button>
+                  <button class="goods-card__cart  button" type="button">В корзину</button>
                   <button class="goods-card__compare" type="button">Добавить к сравнению</button>
                 </div>
               </div>
@@ -252,15 +255,14 @@
                 <a class="goods-card__link" href="item-page-4.html">
                   <h3 class="goods-card__title">Селфи-палка «Следуй за мной»</h3>
                 </a>
-                <span class="goods-price">4 900 руб.</span>
+                <span class="goods-card__price">4 900 руб.</span>
               </div>
             </div>
           </article>
         </li>
       </ul>
 
-      <footer class="goods-list__footer list-footer">
-        <div class="list-footer__pagination pagination">
+      <footer class="goods-list__footer  pagination">
           <a class="pagination__switch  pagination__switch--prev" href="#">Назад</a>
           <ul class="pagination__list  list-pagination">
             <li class="list-pagination__item">
@@ -274,8 +276,8 @@
             </li>
           </ul>
           <a class="pagination__switch  pagination__switch--next" href="#">Вперед</a>
-        </div>
       </footer>
+      </div>
     </section>
   </section>
 </main>
