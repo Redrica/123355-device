@@ -106,14 +106,20 @@ a {
 }
 
 .page-header {
+  display: flex;
+  flex-direction: column;
   padding: 0 20px;
 }
 
 .main-nav {
+  order: -1;
   position: relative;
   display: flex;
+
   flex-direction: column;
   padding: 16px 60px 163px;
+
+  padding-bottom: 52px;
   background-color: rgba(240, 197, 46, 0.5);
 }
 
@@ -128,7 +134,20 @@ a {
   background-color: #ffffff;
 }
 
+/*.main-nav::after {*/
+  /*position: absolute;*/
+  /*bottom: -114px;*/
+  /*left: 0;*/
+  /*z-index: -50;*/
+  /*content: "";*/
+  /*display: block;*/
+  /*width: 100%;*/
+  /*height: 114px;*/
+  /*background-color: rgba(240, 197, 46, 0.5);*/
+/*}*/
+
 .main-nav__logo {
+  align-self: flex-start;
   position: relative;
   z-index: 5;
   margin-left: -3px;
@@ -362,6 +381,7 @@ a {
 }
 
 .page-header .main-menu__item:first-child {
+  position: relative;
   width: 50%;
 }
 
@@ -391,17 +411,28 @@ a {
 }
 
 .catalog-list {
+  position: absolute;
+  top: 23px;
+  left: -60px;
   display: none;
   align-items: stretch;
   margin: 0;
-  padding: 21px 0 34px;
-  width: auto;
+
+  /*padding: 21px 0 34px;*/
+  padding: 21px 60px 38px;
+  width: 1160px;
   list-style: none;
-  background-color: rgba(240, 197, 46, 0.5);
+  background-color: #f7e296;
 }
 
 /*скрыть выпадающее меню*/
-.main-menu__link--catalog:hover + .catalog-list {
+.main-menu__link--catalog:hover + .catalog-list,
+.main-menu__link--catalog:focus + .catalog-list,
+.catalog-list:focus {
+  display: flex;
+}
+
+.catalog-list:hover {
   display: flex;
 }
 
@@ -437,8 +468,20 @@ a {
   padding: 0 0 100px;
 }
 
+.slider-promo::before {
+  position: absolute;
+  top: 0px;
+  left: 0;
+  z-index: -50;
+  content: "";
+  display: block;
+  width: 100%;
+  height: 114px;
+  background-color: rgba(240, 197, 46, 0.5);
+}
+
 .page-header__slider {
-  margin-top: -115px;
+  /*margin-top: -115px;*/
 }
 
 .main-menu__link--catalog:hover ~ .page-header__slider {
@@ -1413,14 +1456,15 @@ a {
   color: #000000;
 }
 
-
-.visually-hidden:not(:focus):not(:active) {
+/*.visually-hidden:not(:focus):not(:active)*/
+.visually-hidden {
   position: absolute;
   width: 1px;
   height: 1px;
   margin: -1px;
   border: 0;
   padding: 0;
+  clip-path: inset(100%);
   clip: rect(0 0 0 0);
   overflow: hidden;
 }
