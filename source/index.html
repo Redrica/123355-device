@@ -24,7 +24,6 @@
         </form>
       </li>
       <li class="user-menu__item">
-        <!-- себе: иконка пользователя – ПЭ отдельно от имени пользователя (тк он тоже обернут в ссылку на профиль) и отдельно от Войти-->
         <a class="user-menu__link  user-menu__link--user hidden" href="profile.html">Валентин Петухов</a>
         <a class="user-menu__link  user-menu__link--user visible" href="#">Войти</a>
         <a class="user-menu__link  hidden" href="#">Выйти</a>
@@ -255,8 +254,10 @@
     <section class="about  about--contacts" id="contacts">
       <h2 class="about__title">Контакты</h2>
       <p class="about__text">Вы можете забрать товар сами, заехав в наш офис. Заодно, вы сможете проверить работоспособность покупки. Всякое бывает.</p>
-      <img class="about__map" src="img/map.jpg" width="560" height="222" alt="Карта проезда">
-      <a class="about__link  button" href="write-us.html">Напишите нам</a>
+      <a class="about__map-popup" href="https://www.google.ru/maps/place/%D1%83%D0%BB.+%D0%A1%D1%82%D1%80%D0%BE%D0%B8%D1%82%D0%B5%D0%BB%D0%B5%D0%B9,+15,+%D0%9C%D0%BE%D1%81%D0%BA%D0%B2%D0%B0,+119311/@55.687034,37.5274293,17z/data=!3m1!4b1!4m5!3m4!1s0x46b54cf65f5c8955:0x694710ccd55501e!8m2!3d55.687031!4d37.529618?hl=ru">
+        <img class="about__map" src="img/map.jpg" width="560" height="222" alt="Карта проезда">
+      </a>
+      <a class="about__link  about__link--modal  button" href="write-us.html">Напишите нам</a>
     </section>
   </div>
 </main>
@@ -323,7 +324,7 @@
   </div>
 </footer>
 
-<div class="map-modal  wrapper" tabindex="-1">
+<div class="map-modal  hidden  wrapper" tabindex="-1">
   <button class="map-modal__close  close-icon" type="button">
     <span class="visually-hidden">Закрыть карту</span>
   </button>
@@ -335,15 +336,14 @@
   </div>
 </div>
 
-<div class="write-us  wrapper" tabindex="-1">
+<div class="write-us  hidden  wrapper" tabindex="-1">
   <button class="write-us__close  close-icon" type="button">
     <span class="visually-hidden">Закрыть форму отправки сообщения</span>
   </button>
   <form class="write-us__form" method="post" action="https://echo.htmlacademy.ru">
-    <button class="write-us__submit  button" type="submit">Отправить</button>
     <div class="write-us__item  input-text">
       <label class="input-text__description" for="name">Ваше имя:</label>
-      <input class="input-text__field" type="text" id="name" name="name" placeholder="Имя Фамилия" required>
+      <input class="input-text__field" type="text" id="name" name="name" placeholder="Имя Фамилия" required pattern="[A-Za-zА-Яа-яЁё]{1,50} [A-Za-zА-Яа-яЁё]{1,50}" title="Имя Фамилия">
     </div>
     <div class="write-us__item  input-text">
       <label class="input-text__description" for="email">Ваш e-mail:</label>
@@ -353,10 +353,11 @@
       <label class="input-text__description" for="letter">Текст письма:</label>
       <textarea class="input-text__field" id="letter" name="letter" rows="7" placeholder="В свободной форме"></textarea>
     </div>
+    <button class="write-us__submit  button" type="submit">Отправить</button>
   </form>
 </div>
 
-<div class="HELPER" style="width: 1000px; height: 1000px"></div>
+<script src="js/popup.js"></script>
 
 </body>
 </html>
