@@ -61,7 +61,7 @@ function initialize() {
   };
 
   var map = new google.maps.Map(document.getElementById('map-canvas'), mapOptions);
-  var image = '../img/map-marker.png';
+  var image = 'img/map-marker.png';
 
   // для маркера
   var myLatLang = new google.maps.LatLng(55.687130, 37.529646);
