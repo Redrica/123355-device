@@ -3,14 +3,13 @@ var server = require('browser-sync').create();
 
 gulp.task('serve', function() {
   server.init({
-    server: 'source/',
+    server: './',
     notify: false,
     open: true,
     cors: true,
     ui: false
   });
 
-  gulp.watch('source/*.html').on('change', server.reload);
-  gulp.watch('source/css/*.css').on('change', server.reload);
+  gulp.watch('*.html').on('change', server.reload);
+  gulp.watch('css/*.css').on('change', server.reload);
 });
-
