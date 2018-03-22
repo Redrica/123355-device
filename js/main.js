@@ -30,12 +30,33 @@ formModalClose.addEventListener('click', function () {
   formModal.classList.add('hidden');
 });
 
+var data = {
+  delivery: {
+    title: 'Доставка',
+    text: 'Мы с удовольствием доставим ваш товар прямо к вашему подъезду совершенно бесплатно! Ведь мы неплохо заработаем, поднимая его на ваш этаж.'
+  },
+  warranty: {
+    title: 'Гарантия',
+    text: 'Если из-за возгорания купленного у нас товара у вас сгорит дом — не переживайте, мы выдадим вам новый.\n' +
+    'Товар, не дом, конечно же.'
+  },
+  credit: {
+    title: 'Кредит',
+    text: 'Залезть в долговую яму стало проще! Кредитные консультанты подберут для вас наиболее выгодные \n' +
+    'условия кредита. Выгодные для нашего банка, разумеется.'
+  }
+};
+
 
 slideDelivery.addEventListener('click', function () {
   console.log('Отображается слайд ДОСТАВКА');
   slideDelivery.classList.add('slider-service__button--current');
   slideWarranty.classList.remove('slider-service__button--current');
   slideCredit.classList.remove('slider-service__button--current');
+  var slideTitle = document.querySelector('.slider-service__title');
+  slideTitle.innerText = data.delivery.title;
+  var slideText = document.querySelector('.slider-service__text');
+  slideText.innerText = data.delivery.text;
 });
 
 slideWarranty.addEventListener('click', function () {
@@ -43,6 +64,10 @@ slideWarranty.addEventListener('click', function () {
   slideWarranty.classList.add('slider-service__button--current');
   slideCredit.classList.remove('slider-service__button--current');
   slideDelivery.classList.remove('slider-service__button--current');
+  var title = document.querySelector('.slider-service__title');
+  title.innerText = data.warranty.title;
+  var slideText = document.querySelector('.slider-service__text');
+  slideText.innerText = data.warranty.text;
 });
 
 slideCredit.addEventListener('click', function () {
@@ -50,6 +75,10 @@ slideCredit.addEventListener('click', function () {
   slideCredit.classList.add('slider-service__button--current');
   slideDelivery.classList.remove('slider-service__button--current');
   slideWarranty.classList.remove('slider-service__button--current');
+  var title = document.querySelector('.slider-service__title');
+  title.innerText = data.credit.title;
+  var slideText = document.querySelector('.slider-service__text');
+  slideText.innerText = data.credit.text;
 });
 
 
