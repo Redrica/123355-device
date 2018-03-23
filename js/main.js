@@ -8,8 +8,6 @@ var slideDelivery = document.getElementById('delivery');
 var slideWarranty = document.getElementById('warranty');
 var slideCredit = document.getElementById('credit');
 
-// можно ли повесить закрытие на один класс?
-
 mapInit.addEventListener('click', function (evt) {
   evt.preventDefault();
   console.log('Открывается окно с картой');
@@ -53,10 +51,16 @@ slideDelivery.addEventListener('click', function () {
   slideDelivery.classList.add('slider-service__button--current');
   slideWarranty.classList.remove('slider-service__button--current');
   slideCredit.classList.remove('slider-service__button--current');
+
   var slideTitle = document.querySelector('.slider-service__title');
   slideTitle.innerText = data.delivery.title;
+
   var slideText = document.querySelector('.slider-service__text');
   slideText.innerText = data.delivery.text;
+
+  var slideImage = document.querySelector('.slider-service__item');
+  slideImage.style.backgroundImage = 'url("../img/icon-delivery.svg")';
+  slideImage.style.backgroundPosition = 'right 67px top 85px';
 });
 
 slideWarranty.addEventListener('click', function () {
@@ -64,10 +68,16 @@ slideWarranty.addEventListener('click', function () {
   slideWarranty.classList.add('slider-service__button--current');
   slideCredit.classList.remove('slider-service__button--current');
   slideDelivery.classList.remove('slider-service__button--current');
+
   var title = document.querySelector('.slider-service__title');
   title.innerText = data.warranty.title;
+
   var slideText = document.querySelector('.slider-service__text');
   slideText.innerText = data.warranty.text;
+
+  var slideImage = document.querySelector('.slider-service__item');
+  slideImage.style.backgroundImage = 'url("../img/icon-warranty.svg")';
+  slideImage.style.backgroundPosition = 'right 47px top 61px';
 });
 
 slideCredit.addEventListener('click', function () {
@@ -75,14 +85,19 @@ slideCredit.addEventListener('click', function () {
   slideCredit.classList.add('slider-service__button--current');
   slideDelivery.classList.remove('slider-service__button--current');
   slideWarranty.classList.remove('slider-service__button--current');
+
   var title = document.querySelector('.slider-service__title');
   title.innerText = data.credit.title;
+
   var slideText = document.querySelector('.slider-service__text');
   slideText.innerText = data.credit.text;
+
+  var slideImage = document.querySelector('.slider-service__item');
+  slideImage.style.backgroundImage = 'url("../img/icon-credit.svg")';
+  slideImage.style.backgroundPosition = 'right 71px top 60px';
 });
 
 
-// себе: этот вариант работает, не трогай его! :-)
 function initialize() {
   var mapOptions = {
     center: new google.maps.LatLng(55.687130, 37.529646),
@@ -101,10 +116,3 @@ function initialize() {
     title: 'Мы вас ОЧЕНЬ ждём! :-)'
   });
 }
-
-
-
-
-
-
-
