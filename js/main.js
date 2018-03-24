@@ -59,7 +59,7 @@ slideDelivery.addEventListener('click', function () {
   slideText.innerText = data.delivery.text;
 
   var slideImage = document.querySelector('.slider-service__item');
-  slideImage.style.backgroundImage = 'url("../img/icon-delivery.svg")';
+  slideImage.style.backgroundImage = 'url("img/icon-delivery.svg")';
   slideImage.style.backgroundPosition = 'right 67px top 85px';
 });
 
@@ -76,7 +76,7 @@ slideWarranty.addEventListener('click', function () {
   slideText.innerText = data.warranty.text;
 
   var slideImage = document.querySelector('.slider-service__item');
-  slideImage.style.backgroundImage = 'url("../img/icon-warranty.svg")';
+  slideImage.style.backgroundImage = 'url("img/icon-warranty.svg")';
   slideImage.style.backgroundPosition = 'right 47px top 61px';
 });
 
@@ -93,7 +93,7 @@ slideCredit.addEventListener('click', function () {
   slideText.innerText = data.credit.text;
 
   var slideImage = document.querySelector('.slider-service__item');
-  slideImage.style.backgroundImage = 'url("../img/icon-credit.svg")';
+  slideImage.style.backgroundImage = 'url("img/icon-credit.svg")';
   slideImage.style.backgroundPosition = 'right 71px top 60px';
 });
 
