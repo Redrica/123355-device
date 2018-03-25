@@ -7,6 +7,32 @@ var formModalClose = document.querySelector('.write-us__close');
 var slideDelivery = document.getElementById('delivery');
 var slideWarranty = document.getElementById('warranty');
 var slideCredit = document.getElementById('credit');
+var catalogInnerInit = document.querySelector('.main-menu__link--catalog');
+var catalogInner = document.querySelector('.main-menu__list');
+var catalogInnerLink = document.querySelectorAll('.catalog-menu__link');
+
+
+// первое открытие выпадашки
+catalogInnerInit.addEventListener('focus', function () {
+  console.log('Открывается выпадающее меню');
+  catalogInner.classList.add('catalog-list-opened');
+});
+
+// поддержание меню в открытом состоянии )))
+Array.prototype.slice.call(catalogInnerLink).forEach(function(item) {
+  item.addEventListener('focus', function () {
+    console.log('Открывается выпадающее меню');
+    catalogInner.classList.add('catalog-list-opened');
+  });
+});
+
+// закрытие меню при уходе фокуса с последней внутренней ссылки
+Array.prototype.slice.call(catalogInnerLink).forEach(function(item) {
+  item.addEventListener('blur', function () {
+    console.log('Закрывается выпадающее меню');
+    catalogInner.classList.remove('catalog-list-opened');
+  });
+});
 
 mapInit.addEventListener('click', function (evt) {
   evt.preventDefault();
