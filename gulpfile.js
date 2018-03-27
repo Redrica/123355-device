@@ -27,10 +27,6 @@ gulp.task('minjs', function () {
     gulp.src('js/main.js'),
     uglify(),
     rename('main.min.js'),
-    gulp.dest('js'),
-    gulp.src('js/menu.js'),
-    uglify(),
-    rename('menu.min.js'),
     gulp.dest('js')
   ]);
 });
