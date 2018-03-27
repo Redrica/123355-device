@@ -7,28 +7,9 @@ var formModalClose = document.querySelector('.write-us__close');
 var slideDelivery = document.getElementById('delivery');
 var slideWarranty = document.getElementById('warranty');
 var slideCredit = document.getElementById('credit');
-var catalogInnerInit = document.querySelector('.main-menu__link--catalog');
-var catalogInner = document.querySelector('.main-menu__list');
-var catalogInnerLink = document.querySelectorAll('.catalog-menu__link');
 var writeUsForm = formModal.querySelector('.write-us__form');
 var userName = formModal.querySelector('[name=fullname]');
 var userEmail = formModal.querySelector('[name=email]');
-
-catalogInnerInit.addEventListener('focus', function () {
-  catalogInner.classList.add('catalog-list-opened');
-});
-
-Array.prototype.slice.call(catalogInnerLink).forEach(function(item) {
-  item.addEventListener('focus', function () {
-    catalogInner.classList.add('catalog-list-opened');
-  });
-});
-
-Array.prototype.slice.call(catalogInnerLink).forEach(function(item) {
-  item.addEventListener('blur', function () {
-    catalogInner.classList.remove('catalog-list-opened');
-  });
-});
 
 mapInit.addEventListener('click', function (evt) {
   evt.preventDefault();
