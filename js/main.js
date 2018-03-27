@@ -10,7 +10,9 @@ var slideCredit = document.getElementById('credit');
 var catalogInnerInit = document.querySelector('.main-menu__link--catalog');
 var catalogInner = document.querySelector('.main-menu__list');
 var catalogInnerLink = document.querySelectorAll('.catalog-menu__link');
-
+var writeUsForm = formModal.querySelector('.write-us__form');
+var userName = formModal.querySelector('[name=fullname]');
+var userEmail = formModal.querySelector('[name=email]');
 
 catalogInnerInit.addEventListener('focus', function () {
   catalogInner.classList.add('catalog-list-opened');
@@ -42,17 +44,42 @@ formInit.addEventListener('click', function (evt) {
   evt.preventDefault();
   formModal.classList.remove('hidden');
   mapModal.classList.add("hidden");
+  userName.focus();
+  userName.classList.remove('input-text__field--invalid');
+  userEmail.classList.remove('input-text__field--invalid');
+});
+
+writeUsForm.addEventListener('submit', function (evt) {
+  if (!userName.value) {
+    evt.preventDefault();
+    userName.classList.add('input-text__field--invalid');
+  }
+
+  if (!userEmail.value) {
+    evt.preventDefault();
+    userEmail.classList.add('input-text__field--invalid');
+  }
+});
+
+userName.addEventListener('focus', function () {
+  userName.classList.remove('input-text__field--invalid');
+});
+
+userEmail.addEventListener('focus', function () {
+  userEmail.classList.remove('input-text__field--invalid');
 });
 
 formModalClose.addEventListener('click', function () {
   formModal.classList.add('hidden');
 });
 
-document.addEventListener("keyup", function (event) {
+window.addEventListener("keydown", function (event) {
     if (event.keyCode == 27){
       event.preventDefault();
       mapModal.classList.add("hidden");
       formModal.classList.add("hidden");
+      userName.classList.remove('input-text__field--invalid');
+      userEmail.classList.remove('input-text__field--invalid');
     }
   }
 );

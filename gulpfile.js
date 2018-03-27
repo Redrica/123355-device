@@ -3,6 +3,10 @@ var server = require('browser-sync').create();
 var pump = require('pump');
 var uglify = require('gulp-uglify');
 var rename = require('gulp-rename');
+var plumber = require('gulp-plumber');
+var postcss = require('gulp-postcss');
+var autoprefixer = require('autoprefixer');
+var minify = require('gulp-csso');
 
 gulp.task('serve', function() {
   server.init({
@@ -23,6 +27,17 @@ gulp.task('minjs', function () {
     gulp.src('js/main.js'),
     uglify(),
     rename('main.min.js'),
-    gulp.dest('auto')
+    gulp.dest('js')
   ]);
+});
+
+gulp.task("style", function () {
+  gulp.src('css/style.css')
+    .pipe(plumber())
+    .pipe(postcss([
+      autoprefixer()
+    ]))
+    .pipe(minify())
+    .pipe(rename('style.min.css'))
+    .pipe(gulp.dest('css'))
 });

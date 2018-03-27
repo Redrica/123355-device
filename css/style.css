@@ -94,9 +94,6 @@ a {
   text-align: center;
   letter-spacing: 0.2em;
   background-color: transparent;
-  -webkit-transition: background-color 0.5s;
-  -o-transition: background-color 0.5s;
-  transition: background-color 0.5s;
   border: none;
   color: #000000;
   cursor: pointer;
@@ -104,10 +101,6 @@ a {
 
 .button:hover,
 .button:focus {
-  -webkit-transition: background-color 0.5s;
-  -o-transition: background-color 0.5s;
-  transition: background-color 0.5s;
-  background-color: #f0c52e;
   outline: none;
 }
 
@@ -130,7 +123,8 @@ a {
 
 .button:hover::before,
 .button:focus::before {
-  display: none;
+  top: 0;
+  height: 100%;
 }
 
 .page-header {
@@ -749,7 +743,6 @@ a {
   justify-content: center;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
-  margin-bottom: 100px;
   padding: 51px 0 81px;
   list-style: none;
 }
@@ -789,10 +782,6 @@ a {
   letter-spacing: 0.009em;
   background-color: #ffffff;
   color: #000000;
-}
-
-.popular__title .nowrap {
-  white-space: nowrap;
 }
 
 .popular__title::before {
@@ -839,7 +828,7 @@ a {
   display: -ms-flexbox;
   display: flex;
   padding-bottom: 70px;
-  background-color: #e5e5e5;
+  background-image: linear-gradient(#ffffff 100px, #e5e5e5 100px);
 }
 
 .slider-service {
@@ -849,7 +838,6 @@ a {
   -webkit-box-align: stretch;
   -ms-flex-align: stretch;
   align-items: stretch;
-  margin-top: -100px;
   padding: 0 20px;
 }
 
@@ -893,6 +881,7 @@ a {
   background-color: #000000;
   color: #f7e184;
   outline: none;
+  cursor: default;
 }
 
 .slider-service__button--current::before {
@@ -979,8 +968,8 @@ a {
   background: url("../img/logo-vive-bw.jpg") no-repeat center center;
 }
 
-.logotypes__link:hover:before,
-.logotypes__link:focus:before {
+.logotypes__link:hover::before,
+.logotypes__link:focus::before {
   display: none;
 }
 
@@ -1148,8 +1137,8 @@ a {
   opacity: 0.3;
 }
 
-.footer__user-list .user-menu__link:hover:before,
-.footer__user-list .user-menu__link:focus:before {
+.footer__user-list .user-menu__link:hover::before,
+.footer__user-list .user-menu__link:focus::before {
   opacity: 0.6;
 }
 
@@ -1266,18 +1255,42 @@ a {
   fill: #ffc600;
 }
 
-.map-modal {
+@keyframes appearance {
+  0% {
+    transform: translate(-50%, 100%);
+    opacity: 0;
+  }
+
+  70% {
+    transform: translate(-50%, -50%);
+    opacity: 1;
+  }
+
+  85% {
+    transform: translate(-50%, -47%);
+  }
+
+  100% {
+    transform: translate(-50%, -50%);
+  }
+}
+
+.modal {
   position: fixed;
   top: 50%;
   left: 50%;
-  z-index: 49;
-  width: 960px;
-  height: 560px;
   -webkit-transform: translate(-50%, -50%);
   -ms-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
   -webkit-box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.2);
   box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.2);
+  animation: appearance 0.7s;
+}
+
+.map-modal {
+  z-index: 49;
+  width: 960px;
+  height: 560px;
 }
 
 .map-modal__close,
@@ -1291,6 +1304,11 @@ a {
 .map-modal__map {
   width: 100%;
   height: 100%;
+}
+
+.map-modal__image {
+  display: block;
+  width: 100%;
 }
 
 .close-icon {
@@ -1347,18 +1365,10 @@ a {
 }
 
 .write-us {
-  position: fixed;
-  top: 50%;
-  left: 50%;
   z-index: 50;
   width: 960px;
   padding: 92px 100px 78px;
-  -webkit-transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
   background-color: #ffffff;
-  -webkit-box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.2);
-  box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.2);
 }
 
 .write-us__form {
@@ -1428,6 +1438,11 @@ a {
 }
 
 .input-text__field:invalid:not(:focus):not(:placeholder-shown) {
+  background-color: rgba(237, 181, 181, 1);
+  opacity: 0.5;
+}
+
+.input-text__field--invalid {
   background-color: rgba(237, 181, 181, 1);
   opacity: 0.5;
 }
@@ -2089,12 +2104,12 @@ a {
   opacity: 0.3;
 }
 
-.pagination__link:hover,
-.pagination__link:focus {
+.pagination__link[href]:hover,
+.pagination__link[href]:focus {
   opacity: 0.6;
 }
 
-.pagination__link:active {
+.pagination__link[href]:active {
   opacity: 1;
 }
 
